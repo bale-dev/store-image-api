@@ -41,13 +41,26 @@ class StoreImageController extends Controller
             $image_file = $request->image_file;
 
             $image_file_name = $image_file->getClientOriginalName();
-            $image->image_file_name  = $image_file_name;
+            
 
+
+
+            // Remove unwanted characters form filename
+            $image_file_name = str_replace(' ', '-', $image_file_name);
+            $image_file_name = str_replace(array('Š', 'š'), 's', $image_file_name);
+            $image_file_name = str_replace(array('Ž', 'ž'), 'z', $image_file_name);
+            $image_file_name = str_replace(array('Đ', 'đ'), 'd', $image_file_name);
+            $image_file_name = str_replace(array('Č', 'č'), 'c', $image_file_name);
+            
             // Get file type
             $image_file_type = $image_file->extension();
-
+            
             // Get file size
             $image_file_size =  number_format( $image_file->getSize() / 1048576, 3) . ' MB';
+            
+
+            // Set image file name
+            $image->image_file_name  = $image_file_name;
 
 
             // Check if image name exists in request and is not emtpy 
