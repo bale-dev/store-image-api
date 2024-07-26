@@ -8,7 +8,7 @@ In this project you will fild API endpoint to store images, image title and imag
 Initiate project:
 - Download project to your computer.
 - Locate downloaded folder with terminal and run `composer install` .
-- Now copy content from .env.example, create new file .env, paste the content and save.
+- Now copy content from .env.example, create new file .env, paste the content and save. Or run `composer run-script post-root-package-install ` in your terminal.
 - Open terminal and run `php artisan key:generate` to generate key for application.
 - Next you must create MySQL database and replace `DB_DATABASE` in .env file. You probably won't have to change `DB_USERNAME` and `DB_PASSWORD`, depending on your setup. 
 - Now go back to terminal and run `php artisan migrate` to automatically insert required tables in our empty database.
