@@ -28,8 +28,8 @@ Testing API endpoints:
 			```json
 			{ 
 			    "name": "Test",
-			    "email" : "test@agildrop.si",
-			    "password" : "agildrop"
+			    "email" : "test@agiledrop.si",
+			    "password" : "agiledrop"
 			}
 			```
 		** note - all fields are required! Password field is minimal 8 characters 
@@ -74,8 +74,8 @@ Additionaly I created login endpoint so you don't need to keep registering new a
 - Body (JSON):  
 	```json
 	{ 
-		"email" : "test@agildrop.si",
-		"password" : "agildrop"
+		"email" : "test@agiledrop.si",
+		"password" : "agiledrop"
 	}
 	```
 ** note - all fields are required
