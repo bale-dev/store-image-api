@@ -48,6 +48,8 @@ Testing API endpoints:
 		- Type: POST
 		- BaseURL (in my case): http://127.0.0.1:8000 
 		- Endpoint: /api/v1/store-image
+        - Headers:
+            - Authentication: Bearer <token>     
 		- Form-data: 
 			- "image_name" : (type: mix - not required) 
 			- "image_description" : (type: mix - not required)
